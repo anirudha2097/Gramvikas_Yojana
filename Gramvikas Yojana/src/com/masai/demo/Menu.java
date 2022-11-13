@@ -22,10 +22,12 @@ public class Menu {
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
-		
+		System.out.println("Welcome to Gram Vikas Yojana.");
+		System.out.println("");
 		System.out.println("Select from following option:");
-		System.out.println("1. BDO Login:");
-		System.out.println("2. GPM Login:");
+		System.out.println("------------------------------");
+		System.out.println("1. BDO Login");
+		System.out.println("2. GPM Login");
 		System.out.println("3. Exit Application");
 		int opt = sc.nextInt();
 		
@@ -35,7 +37,7 @@ public class Menu {
 				break;
 				case 2: LoginToGPM.main(args);
 				break;
-				case 3: System.out.println("Thank You for visiting.");
+				case 3: ExitApplication.main(args);
 				break;
 			}
 		} else {
@@ -63,6 +65,7 @@ public class Menu {
 		int i = sc.nextInt();
 		switch(i) {
 			case 1: RegisterGramPanchayatMember.main(null);
+					BDOMenu();
 					break;
 			case 2: GetAllDetailsOfGPM.main(null);
 					BDOMenu();
@@ -105,32 +108,32 @@ public class Menu {
 		System.out.println("0. Logout");
 		System.out.println("99. Exit Application.");
 		int i = sc.nextInt();
-		switch(i) {
-			case 1: RegisterEmployee.main(null);
-					GPMMenu();
-					break;
-			case 2: GetAllEmployeeDetails.main(null);
-					GPMMenu();
-					break;
-			case 3: GetEmpolyeeDetailsByEid.main(null);
-					GPMMenu();
-					break;
-			case 4: AssignEmployeeToProject.main(null);
-					GPMMenu();
-					break;
-			case 5: GetWorkingDaysAndDurationOfEmployee.main(null);
-					GPMMenu();
-					break;
-			case 0: System.out.println("Logout Successful.\n");
-					Menu.main(null);
-					break;
-			case 99: ExitApplication.main(null);
-					break;
-			default : System.out.println("Option not found.");
-					GPMMenu();
-					break;
+			switch(i) {
+				case 1: RegisterEmployee.main(null);
+						GPMMenu();
+						break;
+				case 2: GetAllEmployeeDetails.main(null);
+						GPMMenu();
+						break;
+				case 3: GetEmpolyeeDetailsByEid.main(null);
+						GPMMenu();
+						break;
+				case 4: AssignEmployeeToProject.main(null);
+						GPMMenu();
+						break;
+				case 5: GetWorkingDaysAndDurationOfEmployee.main(null);
+						GPMMenu();
+						break;
+				case 0: System.out.println("Logout Successful.\n");
+						Menu.main(null);
+						break;
+				case 99: ExitApplication.main(null);
+						break;
+				default : System.out.println("Option not found.");
+						GPMMenu();
+						break;
 					
-		}
-		
+			}
+			sc.close();
+		}	
 	}
-}

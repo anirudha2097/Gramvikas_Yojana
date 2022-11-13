@@ -6,10 +6,11 @@ import com.masai.exceptions.EmployeeException;
 import com.masai.exceptions.GramPanchayatMemberException;
 import com.masai.exceptions.ProjectException;
 import com.masai.model.Employee;
+import com.masai.model.GramPanchayatMember;
 
 public interface GramPanchayatMemberDao {
 
-	public boolean login(String username , String password) throws GramPanchayatMemberException;
+	public GramPanchayatMember login(String username , String password) throws GramPanchayatMemberException;
 	
 	public String createEmployee(Employee employee) throws EmployeeException;
 	

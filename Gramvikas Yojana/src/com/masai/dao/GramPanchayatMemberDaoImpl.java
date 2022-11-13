@@ -11,13 +11,14 @@ import com.masai.exceptions.EmployeeException;
 import com.masai.exceptions.GramPanchayatMemberException;
 import com.masai.exceptions.ProjectException;
 import com.masai.model.Employee;
+import com.masai.model.GramPanchayatMember;
 import com.masai.utility.DButil;
 
 public class GramPanchayatMemberDaoImpl implements GramPanchayatMemberDao{
 
 	@Override
-	public boolean login(String username, String password) throws GramPanchayatMemberException {
-		boolean flag = false;
+	public GramPanchayatMember login(String username, String password) throws GramPanchayatMemberException {
+GramPanchayatMember gpm = new GramPanchayatMember();
 		
 		try (Connection conn = DButil.provideConnection()){
 			PreparedStatement ps = conn.prepareStatement("select * from GPM where email=? AND password=?");
@@ -27,7 +28,11 @@ public class GramPanchayatMemberDaoImpl implements GramPanchayatMemberDao{
 			ResultSet rs = ps.executeQuery();
 			
 			if(rs.next()) {
-				flag = true;
+				gpm.setGpmid(rs.getInt("gpmid"));
+				gpm.setName(rs.getString("name"));
+				gpm.setAddress(rs.getString("address"));
+				gpm.setEmail(rs.getString("email"));
+				gpm.setPassword(rs.getString("password"));
 			} else {
 				throw new GramPanchayatMemberException("Invalid username or password");
 			}
@@ -37,7 +42,7 @@ public class GramPanchayatMemberDaoImpl implements GramPanchayatMemberDao{
 			throw new GramPanchayatMemberException(e.getMessage());
 		}
 		
-		return flag;
+		return gpm;
 	}
 
 	
