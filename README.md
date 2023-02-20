@@ -18,7 +18,7 @@ see all gram panchayat member, allocating project to gram panchayat member, get 
 <li> See All GPM </li>
 <li> Allocate Project to GPM </li>
 <li> Get Employee Details by Project Name </li>
-<li> Logout li>
+<li> Logout </li>
 
 <h4> Roles of GPM:-</h4>
 <li> Login to application </li>
@@ -29,8 +29,8 @@ see all gram panchayat member, allocating project to gram panchayat member, get 
 <li> Get Employee working days and wages in project </li>
 <li> Logout </li>
 
-<h4>Flow Diagram of Project</h4>
-<img width="398" alt="Screenshot_20230220_202331" src="https://user-images.githubusercontent.com/107480356/220147114-49252ae4-6379-4d66-9f82-5ec109839fe2.png">
+<h4>Flow Diagram of Project:-</h4>
+<img src =  https://user-images.githubusercontent.com/107480356/220149613-6c55a4ea-93df-44b9-9854-8658b04813ea.jpg />
 
-<h4>ER Diagram of Project Database</h4>
-<img width="606" alt="Screenshot_20230220_205258" src="https://user-images.githubusercontent.com/107480356/220147144-14cb4d27-013b-46cc-bb82-df5865d61306.png">
+<h4>ER Diagram of Project Database:-</h4>
+<img src = https://user-images.githubusercontent.com/107480356/220149726-8d8cee57-5672-4640-9849-c0da635a2092.jpg />
